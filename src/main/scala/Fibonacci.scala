@@ -1,8 +1,10 @@
+import scala.annotation.tailrec
+
 object Fibonacci extends App{
   Fibonacci.gefFibNo(8)
   def  gefFibNo(n:Int): Int ={
     //calFibo(n,0,1)
-    def calFibo(n:Int,last:Int=0,next:Int=1): Int={
+   @tailrec def calFibo(n:Int, last:Int=0, next:Int=1): Int={
       print(last)
       if(n==1||n==2)
         {
