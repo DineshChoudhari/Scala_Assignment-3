@@ -1,19 +1,20 @@
 object Fibonacci extends App{
-  Fibonacci.gefFibNo(5)
+  Fibonacci.gefFibNo(8)
   def  gefFibNo(n:Int): Int ={
-
-    def calFibo(n:Int,last:Int=0,next:Int=1): Int ={
+    //calFibo(n,0,1)
+    def calFibo(n:Int,last:Int=0,next:Int=1): Int={
+      print(last)
       if(n==1||n==2)
         {
           last
         }
       else
         {
-          print(last)
+         // print(last)
           calFibo(n-1,last=last+next,next=last)
         }
     }
-    gefFibNo(n)
+    calFibo(n)
   }
 
 }
