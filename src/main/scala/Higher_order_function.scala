@@ -3,13 +3,12 @@ import scala.io.StdIn
 
 
 object Higher_order_function {
-  def area(shape:String,first:Int,second:Int,fun:(Int,Int)=>Int): Unit = {
-    fun(first, second)
+  def area(shape:String,first:Int,second:Int,fun:(Int,Int)=>Int): String = {
+   // fun(first, second)
     shape match {
-      case "rectangle"=> val rectarea=fun;
-        s"Area of rectangle=${fun}"
-      case "rhombus"=> val rhmarea=fun ;"Area of rhombus" +rhmarea
-      case "parallelogram"=> val pallarea=fun ;"Area of parallelogram" +pallarea
+      case "rectangle"=> s"Area of rectangle ${fun(first,second)}"
+      case "rhombus"=> s"Area of rhombus ${fun(first,second)}"
+      case "parallelogram"=> s"pallarea ${fun(first,second)}"
       case _ =>"No Such shape" +shape
 
     }
@@ -29,7 +28,7 @@ def rectangleArea(len:Int,Bre:Int): Int={
   }
   def main(args: Array[String]): Unit = {
     print(Higher_order_function.area("rectangle",2,3,rectangleArea))
-
+    //Higher_order_function.area("square",4,5,)
 
 
 
